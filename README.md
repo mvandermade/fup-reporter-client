@@ -60,3 +60,14 @@ For more information on using the Angular CLI, including detailed command refere
 
 TODO:
 https://angular.dev/essentials/dependency-injection
+
+Installing tests
+```
+    "@angular-devkit/build-angular": "^20.0.0",
+ng generate config karma
+```
+
+Create components
+```
+ng generate component ProfileEditor
+```

@@ -8,4 +8,8 @@ import {FormControl, ReactiveFormsModule} from "@angular/forms";
 })
 export class Form {
     favoriteColorControl = new FormControl('');
+
+    constructor() {
+        this.favoriteColorControl.setValue("RGB");
+    }
 }
