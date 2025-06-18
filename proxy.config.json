@@ -1,0 +1,6 @@
+{
+  "api/hub/tracker": {
+    "target": "http://localhost:31314/hub/tracker",
+    "secure": false
+  }
+}
