@@ -71,6 +71,3 @@ Create components
 ```
 ng generate component ProfileEditor
 ```
-
-## Got stuck
-Because I could not figure out proxying 

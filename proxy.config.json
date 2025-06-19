@@ -1,6 +1,10 @@
 {
-  "api/hub/tracker": {
-    "target": "http://localhost:31314/hub/tracker",
-    "secure": false
+  "/api/hub/tracker": {
+    "target": "http://127.0.0.1:31314",
+    "secure": false,
+    "ws": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
   }
 }
