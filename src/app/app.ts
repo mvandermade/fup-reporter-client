@@ -12,7 +12,7 @@ export class App {
   isClicked = signal(false)
 
   constructor() {
-    this.title.set("oops")
+    this.title.set("Reporter monitor")
   }
 
   onClick(event: Event) {

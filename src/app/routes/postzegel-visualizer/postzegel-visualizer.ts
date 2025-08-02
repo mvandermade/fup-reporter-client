@@ -1,23 +1,33 @@
 import { Component } from '@angular/core';
 import {webSocket} from "rxjs/webSocket";
+import {isWebSocketSerialEvent, WebSocketBaseType} from "./websocket-types";
+import {AsyncPipe} from "@angular/common";
+import {map, Observable, of, startWith} from "rxjs";
 
 @Component({
   selector: 'app-postzegel-visualizer',
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './postzegel-visualizer.html',
   styleUrl: './postzegel-visualizer.scss'
 })
 export class PostzegelVisualizer {
+  indicator: Observable<string>
+
   constructor() {
     const protocol = window.location.protocol.replace('http', 'ws');
     // get location host
     const host = window.location.host;
-    const subject = webSocket(`${protocol}//${host}/api/hub/tracker`);
+    const subject = webSocket<WebSocketBaseType>(`${protocol}//${host}/api/hub/tracker`);
 
-    subject.subscribe({
-      next: msg => console.log('message received: ' + msg), // Called whenever there is a message from the server.
-      error: err => console.log(err), // Called if at any point WebSocket API signals some kind of error.
-      complete: () => console.log('complete') // Called when connection is closed (for whatever reason).
-    });
+    this.indicator = subject.pipe(
+        map(message => {
+          if (isWebSocketSerialEvent(message)) {
+            return message.code
+          } else {
+            return ""
+          }
+        }),
+        startWith("Waiting...")
+    )
   }
 }
