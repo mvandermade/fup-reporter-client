@@ -1,5 +1,5 @@
 <ul class="container">
-    @for (item of tiles; track $index; ) {
+    @for (item of tiles$ | async; track $index; ) {
         <li>{{ item }}</li>
     } @empty {
         <li>There are no items.</li>
