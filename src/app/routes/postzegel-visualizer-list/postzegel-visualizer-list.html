@@ -1,9 +1,12 @@
+<div>
+    <app-websocket-status></app-websocket-status>
+</div>
 <div class="grid-container">
-  @if (tileGroups$ | async; as groups) {
+    @if (tileGroups$ | async; as groups) {
     @for (group of groups; track group.groupId) {
       <div class="grid-item">
-        <h3>Groep {{ group.groupId }}</h3>
-        <div class="tile">{{ group.value || 'Leeg' }}</div>
+        <h3>{{ group.groupId }}</h3>
+        <div class="tile {{group.tile.style}}">{{ group.tile.code || 'Leeg' }}</div>
       </div>
     }
     @if (!groups.length) {

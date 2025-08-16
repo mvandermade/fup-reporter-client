@@ -1,6 +1,6 @@
 {
   "/api/hub/tracker": {
-    "target": "http://127.0.0.1:31314",
+    "target": "http://127.0.0.1:8882",
     "secure": false,
     "ws": true,
     "pathRewrite": {

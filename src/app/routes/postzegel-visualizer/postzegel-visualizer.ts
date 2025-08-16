@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import {webSocket} from "rxjs/webSocket";
-import {isWebSocketSerialEvent, WebSocketBaseType} from "./websocket-types";
 import {AsyncPipe} from "@angular/common";
 import {map, Observable, of, startWith} from "rxjs";
+import {isWebSocketSerialEvent, WebSocketBaseType} from "../../types/websocket-types";
 
 @Component({
   selector: 'app-postzegel-visualizer',
