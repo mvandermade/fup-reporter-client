@@ -1,7 +1,13 @@
-<ul class="container">
-    @for (item of tiles$ | async; track $index; ) {
-        <li>{{ item }}</li>
-    } @empty {
-        <li>There are no items.</li>
+<div class="grid-container">
+  @if (tileGroups$ | async; as groups) {
+    @for (group of groups; track group.groupId) {
+      <div class="grid-item">
+        <h3>Groep {{ group.groupId }}</h3>
+        <div class="tile">{{ group.value || 'Leeg' }}</div>
+      </div>
     }
-</ul>
+    @if (!groups.length) {
+      <div class="empty-state">Nog geen gegevens beschikbaar</div>
+    }
+  }
+</div>
