@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostzegelVisualizer } from './postzegel-visualizer';
+import { PostzegelVisualizerList } from './postzegel-visualizer-list';
 
 describe('PostzegelVisualizerList', () => {
-  let component: PostzegelVisualizer;
-  let fixture: ComponentFixture<PostzegelVisualizer>;
+  let component: PostzegelVisualizerList;
+  let fixture: ComponentFixture<PostzegelVisualizerList>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PostzegelVisualizer]
+      imports: [PostzegelVisualizerList]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PostzegelVisualizer);
+    fixture = TestBed.createComponent(PostzegelVisualizerList);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

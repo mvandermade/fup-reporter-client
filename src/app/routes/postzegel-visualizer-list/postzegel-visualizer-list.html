@@ -1,0 +1,7 @@
+<ul class="container">
+    @for (item of tiles; track $index; ) {
+        <li>{{ item }}</li>
+    } @empty {
+        <li>There are no items.</li>
+    }
+</ul>
