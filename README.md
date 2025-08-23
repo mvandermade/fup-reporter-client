@@ -5,8 +5,8 @@ Created to visualize the status of the reporter
 
 Currently it's use is limited to have N=1 reporter's.
 
-
-
+## TODO
+- Implement initial state fetch
 
 ## Developer info
 
