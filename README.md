@@ -1,4 +1,14 @@
-# MadeFunicularPostzegelReporterClient
+# Funicular Postcard Reporter Client
+<img width="2048" height="2048" alt="Untitled_Artwork" src="https://github.com/user-attachments/assets/4c6db0a8-ff2d-427a-8a7f-7aa8632abaf9" />
+
+Created to visualize the status of the reporter
+
+Currently it's use is limited to have N=1 reporter's.
+
+
+
+
+## Developer info
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
 
